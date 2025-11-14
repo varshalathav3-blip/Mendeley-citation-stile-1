@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
   <info>
-    <title>Custom Numeric (Qian et al. format with Italic Journal)</title>
-    <id>http://www.zotero.org/styles/custom-numeric-qian-et-al-italic-journal</id>
-    <link href="http://www.zotero.org/styles/custom-numeric-qian-et-al-italic-journal" rel="self"/>
+    <title>Custom Numeric (Qian et al. format with Bracketed Numbers)</title>
+    <id>http://www.zotero.org/styles/custom-numeric-qian-et-al-bracketed</id>
+    <link href="http://www.zotero.org/styles/custom-numeric-qian-et-al-bracketed" rel="self"/>
     <category citation-format="numeric"/>
     <category field="science"/>
-    <summary>An exact numeric style with authors, year in parentheses, title, journal (italicized), bold volume:pages, and no DOI.</summary>
-    <updated>2025-11-14T10:28:45+00:00</updated>
+    <summary>A full numeric style with bibliography entry numbers in square brackets, authors, year in parentheses, title, italic journal, bold volume:pages.</summary>
+    <updated>2025-11-14T10:35:50+00:00</updated>
   </info>
   <macro name="author">
     <names variable="author">
@@ -33,6 +33,8 @@
 
   <bibliography entry-spacing="0" second-field-align="flush">
     <layout>
+      <text variable="citation-number" prefix="[" suffix="] "/>
+      
       <text macro="author" suffix=" "/>
       
       <date variable="issued" prefix="(" suffix=")">
