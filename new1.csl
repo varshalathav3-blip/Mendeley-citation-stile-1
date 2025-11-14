@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
+  <info>
+    <title>Custom Numeric (Qian et al. format with Italic Journal)</title>
+    <id>http://www.zotero.org/styles/custom-numeric-qian-et-al-italic-journal</id>
+    <link href="http://www.zotero.org/styles/custom-numeric-qian-et-al-italic-journal" rel="self"/>
+    <category citation-format="numeric"/>
+    <category field="science"/>
+    <summary>An exact numeric style with authors, year in parentheses, title, journal (italicized), bold volume:pages, and no DOI.</summary>
+    <updated>2025-11-14T10:28:45+00:00</updated>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name delimiter=", " initialize-with=". " and="symbol" name-as-sort-order="all"/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+  
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography entry-spacing="0" second-field-align="flush">
+    <layout>
+      <text macro="author" suffix=" "/>
+      
+      <date variable="issued" prefix="(" suffix=")">
+        <date-part name="year"/>
+      </date>
+      
+      <text macro="title" prefix=" " suffix=". "/>
+      
+      <text variable="container-title" font-style="italic" suffix=" "/>
+      
+      <group delimiter=":">
+        <text variable="volume" font-weight="bold"/>
+        <text variable="page"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
